@@ -30,6 +30,7 @@
         <replace css:content="#portal-personaltools" css:theme="#user ul" />
         <replace css:content="#portal-siteactions" css:theme="#user div" />
         <copy attributes="href title" css:content="#portal-logo" css:theme="#logo a" />
+        <replace css:content-children="#portal-logo" css:theme-children="#logo a" />
         <copy attributes="style" css:content="#portal-header" css:theme="header" />
         <replace css:content-children="#portal-globalnav" css:theme-children="nav ul" />
         <drop css:content=".searchSection" />
