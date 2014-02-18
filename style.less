@@ -11,6 +11,7 @@
 // Basic Colors
 @main-bg: #f6f6f6; 
 @main-color: #0e9de3;
+@edit-color: #0e9de3;
 
 // content
 @content-color: #fff;
@@ -128,15 +129,29 @@ dl.portlet a:hover {
 	background: #000;
 	color: #fff;
 	min-height: 1.5em;
+	height: 30px;
 }
 #user>img {
 	max-height: 20px;
 	padding: 5px;
+	float: left;
+}
+#portal-siteactions {
+	text-align:left;
+	clear: none;
+	float: right;
+	padding: 4px;
+	border-left: 1px solid #666;
+}
+#portal-siteactions a:hover {
+	color: @main-color !important;
 }
 #portal-personaltools {
-	position: absolute;
+	float: right;
 	background: #000;
 	color: #fff;
+	border-radius: 0;
+	padding: 6px;
 }
 #portal-personaltools dd {
 	background: #000;
@@ -186,17 +201,68 @@ header a:hover {
 
 /* search */
 #portal-searchbox {
-	width: 45%;
+	width: 240px;
 	float: right;
 	text-align: right;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background: @main-bg;
+	padding: 5px;
+	position: relative;
 }
 #portal-searchbox input.searchField {
-	border: 1px solid #ccc;
+	border: none;
 	padding: 0.5em 0.2em 0.5em 0.2em;
+	background: transparent;
+	position: absolute;
+	top: 5px;
+	left: 5px;
 }
+#portal-searchbox:before {
+	content: "\f002";
+	font-family: FontAwesome;
+	font-size: 2em;
+	color: #666;
+}
+
 #portal-searchbox input.searchButton {
 	padding: 0.5em;
+	background: transparent;
+	border: none;
+	border-left: 1px solid #ccc;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	text-indent: -2500px;
+	width: 30px;
+	cursor: pointer;
 }
+
+#portal-siteactions li {
+    margin-left: 0.8em;
+    display: block;
+    float: right;
+    width: 20px;
+    overflow: hidden;
+    white-space: nowrap;     
+}
+#portal-siteactions a {
+	color: #fff;
+}
+#portal-siteactions a:hover {
+	color: @main-color;
+}
+#portal-siteactions a:before {
+    font-family: FontAwesome;
+    font-size: 1.5em;
+}
+#siteaction-contact a:before {content: "\f0e0";}
+#siteaction-sitemap a:before {content: "\f0e8";} 
+#siteaction-accessibility a:before {content: "\f118";}
+#siteaction-search a:before {content: "\f002";}
+#portal-siteactions li#siteaction-accessibility {width: 17px;}
+
+
 /* Navigation */
 
 nav {
@@ -307,10 +373,6 @@ ul.submenu ul {
 #portal-breadcrumbs {
 	font-size: 80%;
 	clear: both;
-	color: #fff;
-}
-#portal-breadcrumbs a, .breadcrumbSeparator {
-	color: #fff;
 }
 .section-front-page #portal-breadcrumbs {
     display: none;
@@ -442,11 +504,31 @@ aside a {
 	display: inline;
 }
 
+/********** Edit bar *************/
+#edit-bar, 
+#content-views,
+#contentActionMenus,
+#contentActionMenus dl.actionMenu a,
+#contentActionMenus dl.actionMenu.activated dd {
+	background-color: @edit-color;
+}
+#edit-bar, 
+#contentActionMenus dl.actionMenu.activated dd {
+	border-color: @edit-color;
+}
+#content-views li.selected a, 
+#content-views li a:hover, 
+#content li.formTab a.selected, 
+#content li.formTab a:hover, 
+#content-core li.formTab a.selected, 
+#content-core li.formTab a:hover {
+	background: @main-bg;
+}
 
 /********** Footer **********/
 footer {
 	background: #d8d8d8;
-	padding: 2em 2em 0 2em;
+	padding: 2em;
     font-size: 80%;
     border-top: 1px solid #ccc;
 }
@@ -458,7 +540,7 @@ footer p {
 
 #footer-info {padding-top: 10px;}
 
-#portal-siteactions {text-align:left;}
+
 
 
 /**** RESPONSIVE ***/
