@@ -158,8 +158,8 @@ header a:hover {
 }
 #logo img {
   float: left;
-  margin: 0.2em 1em 0.2em 0;
-  max-height: 200px;
+  margin: 0.2em 1em 0.4em 0;
+  max-height: 60px;
 }
 /* search */
 #portal-searchbox {
@@ -198,7 +198,7 @@ nav li a:link {
   font-size: 80%;
   text-decoration: none;
   display: block;
-  padding: 0.5em 2em;
+  padding: 0.7em 2em;
 }
 nav li:last-child {
   border: none;
@@ -218,10 +218,9 @@ nav li.selected a {
 nav ul.submenu a {
   background: #f8f8f8;
   color: #666666 !important;
-  text-align: right;
 }
 nav ul.submenu a:hover {
-  color: #666666;
+  color: #0e9de3;
   background: #f8f8f8;
 }
 nav ul {
@@ -252,11 +251,12 @@ nav li:hover > ul.submenu {
 }
 ul.submenu {
   display: none;
-  left: auto;
-  right: 0;
+  left: 0.8em;
   position: absolute;
   top: 100%;
   z-index: 2;
+  border-color: #d8d8d8;
+  border-top: none;
 }
 nav ul li:hover > ul.submenu {
   display: block;
@@ -264,10 +264,11 @@ nav ul li:hover > ul.submenu {
 ul.submenu li {
   float: none;
   margin: 0 1px 1px 0;
+  display: block;
+  text-align: left;
 }
 nav ul ul.submenu li a {
-  padding: 0.5em 1.5em 0.5em 1em;
-  width: 12em;
+  padding: 0.7em 1.5em 0.7em 1em;
 }
 ul.submenu ul {
   top: 0;
