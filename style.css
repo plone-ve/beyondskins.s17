@@ -239,7 +239,7 @@ header a:hover {
   content: "\f0e8";
 }
 #siteaction-accessibility a:before {
-  content: "\f118";
+  content: "\f193";
 }
 #siteaction-search a:before {
   content: "\f002";
@@ -291,6 +291,7 @@ nav li.selected a {
 nav ul.submenu a {
   background: #f8f8f8;
   color: #666666 !important;
+  border: 1px solid #ccc;
 }
 nav ul.submenu a:hover {
   color: #0e9de3;
@@ -446,6 +447,68 @@ dl.portlet dt.portletHeader a {
 .portlet {
   margin-bottom: 2em;
   padding: 4px 0;
+}
+dl.portlet dt {
+  padding: 0.5em;
+}
+.portletHeader a,
+dl.portlet dt.portletHeader a {
+  display: inline;
+}
+/* portlet icons */
+dl.portlet dt:before {
+  font-family: FontAwesome;
+  font-size: 1em;
+  margin-right: 7px;
+}
+.votePortlet dt:before {
+  content: "\f080";
+}
+.portletWhitePagesPortlet dt:before {
+  content: "\f02d";
+}
+.portlet-static-links-uteis dt:before {
+  content: "\f0ac";
+}
+.portletBirthdayPortlet dt:before {
+  content: "\f000";
+}
+.portletWorkflowReview dt:before {
+  content: "\f071";
+}
+.portletPersonProfile dt:before {
+  content: "\f017";
+}
+/* fix me! I have no class */
+.portletEvents dt:before {
+  content: "\f073";
+}
+/* portlet profile */
+dl.portletPersonProfile > dt {
+  display: none;
+}
+.profile-options li {
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+.profile-options li a {
+  display: block;
+  padding: 7px;
+  color: #666 !important;
+}
+.profile-options li a:before {
+  content: "\f007";
+  font-family: FontAwesome;
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+dl.portletPersonProfile dl {
+  margin-top: 4em;
+  font-size: 100%;
+}
+dl.portletPersonProfile dl .portletItemDetails {
+  color: #666;
+  margin-left: 0;
 }
 /* lists inside columns */
 aside dl,
