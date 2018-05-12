@@ -1,0 +1,17 @@
+Changelog
+=========
+
+0.1dev (unreleased)
+-------------------
+
+- Icones para o titulo dos portlets [Andre Nogueira]
+
+- estilos para o portlet profile e theme customizer [Andre Nogueira]
+
+- Adiciona icones [Andre Nogueira]
+
+- Ajustes no menu dropdown [Andre Nogueira]
+
+- upload inicial [Andre Nogueira]
+
+- Initial release
