@@ -1,0 +1,693 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+/******************************************
+
+ Change values and compile your .less file
+ This will generate your final .css file
+
+******************************************/
+/******************************************
+
+  You don't need to edit the lines below
+
+******************************************/
+/**** GRID ****/
+/* Very very simple, semantic and human friendly columns */
+/* Column size */
+#main-content {
+  width: auto;
+}
+#column-one {
+  width: 20%;
+}
+#column-two {
+  width: 20%;
+}
+/* old fashion table layout */
+#main {
+  display: table;
+  width: 100%;
+}
+#main-content,
+#column-one,
+#column-two {
+  display: table-cell;
+  vertical-align: top;
+}
+/* margin columns */
+#main-content {
+  padding: 2%;
+}
+#column-one {
+  padding: 2%;
+}
+#column-two {
+  padding: 2%;
+}
+#portal-column-content {
+  width: 100%;
+  margin-left: -100%;
+}
+/**** Basic Styles ****/
+.gradient {
+  background: -webkit-linear-gradient(#f6f6f6, #f1f1f1);
+  /* For Safari */
+
+  background: -o-linear-gradient(#f6f6f6, #f1f1f1);
+  /* For Opera 11.1 to 12.0 */
+
+  background: -moz-linear-gradient(#f6f6f6, #f1f1f1);
+  /* For Firefox 3.6 to 15 */
+
+  background: linear-gradient(#f6f6f6, #f1f1f1);
+  /* Standard syntax (must be last) */
+
+}
+.wrapper-size {
+  margin: 0 auto;
+  width: 100%;
+}
+.shadow {
+  box-shadow: 0 2px 3px #ccc;
+}
+.text-shadow {
+  text-shadow: 1px 1px 2px #000000;
+  -webkit-text-stroke: 1px #cccccc;
+}
+/********** Basic styles **********/
+body {
+  background: #f6f6f6 url(img/background.jpg) repeat-x top center;
+  color: #333333;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+a:link,
+a:visited,
+#content a:link,
+dl.portlet a:link {
+  color: #0b7cb3;
+  border-bottom: none;
+}
+.state-published {
+  color: #0b7cb3 !important;
+}
+a:hover {
+  color: #085b83;
+}
+#content a:hover,
+dl.portlet a:hover {
+  color: #085b83 !important;
+}
+.clear {
+  clear: both;
+}
+/********** Main container **********/
+#wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+/********** Header **********/
+#user {
+  background: #000;
+  color: #fff;
+  min-height: 1.5em;
+  height: 30px;
+}
+#user > img {
+  max-height: 20px;
+  padding: 5px;
+  float: left;
+}
+#portal-siteactions {
+  text-align: left;
+  clear: none;
+  float: right;
+  padding: 4px;
+  border-left: 1px solid #666;
+}
+#portal-siteactions a:hover {
+  color: #0e9de3 !important;
+}
+#portal-personaltools {
+  float: right;
+  background: #000;
+  color: #fff;
+  border-radius: 0;
+  padding: 6px;
+}
+#portal-personaltools dd {
+  background: #000;
+}
+#portal-personaltools a {
+  color: #fff;
+}
+#portal-personaltools dd a:hover {
+  background: #666;
+}
+/* header area */
+header {
+  background: url(img/background.png) no-repeat top center;
+  background-size: 100% auto;
+  color: #cccccc;
+  padding: 0.5em 1em;
+}
+header a:link,
+header a:visited {
+  color: #cccccc;
+  text-decoration: none;
+}
+header a:hover {
+  color: #000000;
+}
+/* banner */
+#logo {
+  width: 40%;
+  float: left;
+  height: 85px;
+}
+#logo a {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 2.5em;
+}
+#logo img {
+  float: left;
+  margin: 0.2em 0 0.4em 0;
+  max-height: 60px;
+  width: auto;
+}
+/* search */
+#portal-searchbox {
+  width: 240px;
+  float: right;
+  text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f6f6f6;
+  padding: 5px;
+  position: relative;
+}
+#portal-searchbox input.searchField {
+  border: none;
+  padding: 0.5em 0.2em 0.5em 0.2em;
+  background: transparent;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+#portal-searchbox:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 2em;
+  color: #666;
+}
+#portal-searchbox input.searchButton {
+  padding: 0.5em;
+  background: transparent;
+  border: none;
+  border-left: 1px solid #ccc;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  text-indent: -2500px;
+  width: 30px;
+  cursor: pointer;
+}
+#portal-siteactions li {
+  margin-left: 0.8em;
+  display: block;
+  float: right;
+  width: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#portal-siteactions a {
+  color: #fff;
+}
+#portal-siteactions a:hover {
+  color: #0e9de3;
+}
+#portal-siteactions a:before {
+  font-family: FontAwesome;
+  font-size: 1.5em;
+}
+#siteaction-contact a:before {
+  content: "\f0e0";
+}
+#siteaction-sitemap a:before {
+  content: "\f0e8";
+}
+#siteaction-accessibility a:before {
+  content: "\f193";
+}
+#siteaction-search a:before {
+  content: "\f002";
+}
+#portal-siteactions li#siteaction-accessibility {
+  width: 17px;
+}
+/* Navigation */
+nav {
+  color: #666666;
+  clear: both;
+  margin-top: 2.2em;
+  border-bottom: 1px solid #d8d8d8;
+  border-top: 1px solid #d8d8d8;
+}
+nav ul {
+  background: #f8f8f8;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  margin-left: 1px;
+  background: #f8f8f8;
+  font-weight: bold;
+  text-align: center;
+}
+nav li a:link {
+  font-size: 80%;
+  text-decoration: none;
+  display: block;
+  padding: 0.7em 2em;
+}
+nav li:last-child {
+  border: none;
+  padding-right: 0;
+}
+nav li a:link,
+nav li a:visited {
+  color: #666666;
+}
+nav li a:hover {
+  color: #0e9de3;
+}
+nav li.selected a {
+  color: #0e9de3;
+}
+/* DropDown compatibility */
+nav ul.submenu a {
+  background: #f8f8f8;
+  color: #666666 !important;
+  border: 1px solid #ccc;
+}
+nav ul.submenu a:hover {
+  color: #0e9de3;
+  background: #f8f8f8;
+}
+nav ul {
+  list-style-image: none;
+  position: relative;
+  /* fix ie */
+
+  zoom: 1;
+  /* fix ie */
+
+}
+nav ul:after {
+  content: "";
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a {
+  display: block;
+  border-top: 1px solid #fff;
+}
+nav li:hover > ul.submenu {
+  display: block;
+}
+ul.submenu {
+  display: none;
+  left: 0.8em;
+  position: absolute;
+  top: 100%;
+  z-index: 2;
+  border-color: #d8d8d8;
+  border-top: none;
+}
+nav ul li:hover > ul.submenu {
+  display: block;
+}
+ul.submenu li {
+  float: none;
+  margin: 0 1px 1px 0;
+  display: block;
+  text-align: left;
+  width: 12em;
+}
+nav ul ul.submenu li a {
+  padding: 0.7em 1.5em 0.7em 1em;
+}
+ul.submenu ul {
+  top: 0;
+  left: 100%;
+  right: auto;
+}
+nav li:nth-child(6) ul.submenu ul,
+nav li:nth-child(7) ul.submenu ul,
+nav li:nth-child(8) ul.submenu ul {
+  left: auto;
+  right: 100%;
+}
+ul.submenu a.state-published:hover,
+.selected ul.submenu .state-published {
+  color: #999999 !important;
+}
+/********** Content **********/
+/* breadcrumb */
+#portal-breadcrumbs {
+  font-size: 80%;
+  clear: both;
+}
+.section-front-page #portal-breadcrumbs {
+  display: none;
+}
+/* text styles */
+p {
+  line-height: 1.4em;
+  font-family: arial, helvetica, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+}
+h1 {
+  color: #464646;
+  border: none;
+  margin-bottom: 0.6em;
+  margin-top: 0;
+  font-size: 2.5em;
+  line-height: 1em;
+}
+h2 {
+  color: #464646;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+}
+#content .documentDescription,
+#content #description {
+  color: #4d4d4d;
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+/********** Tiles **********/
+.tile img {
+  max-width: 100%;
+  height: auto;
+}
+/* galeria */
+.galleria-container {
+  background: transparent;
+}
+.cover-carousel-tile {
+  margin-bottom: 2em;
+}
+.galleria-stage {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.galleria-info-text {
+  padding: 0;
+}
+.galleria-info-title {
+  font: bold 2em/1.1 'Open Sans', sans-serif;
+  font-weight: normal;
+}
+.galleria-info-description {
+  font: normal 1em/1.4 arial, helvetica, sans-serif;
+  margin: 0;
+  color: #333333;
+}
+/*********** Portlets ***********/
+/* general styles */
+.portletHeader,
+dl.portlet dt.portletHeader {
+  border-bottom: #d0d0d0 1px solid;
+  font-weight: bold;
+  background: transparent;
+  color: #0e9de3;
+}
+.portletHeader a,
+dl.portlet dt.portletHeader a {
+  color: #0e9de3;
+}
+.portlet {
+  margin-bottom: 2em;
+  padding: 4px 0;
+}
+dl.portlet dt {
+  padding: 0.5em;
+}
+.portletHeader a,
+dl.portlet dt.portletHeader a {
+  display: inline;
+}
+/* portlet icons */
+dl.portlet dt:before {
+  font-family: FontAwesome;
+  font-size: 1em;
+  margin-right: 7px;
+}
+.votePortlet dt:before {
+  content: "\f080";
+}
+.portletWhitePagesPortlet dt:before {
+  content: "\f02d";
+}
+.portlet-static-links-uteis dt:before {
+  content: "\f0ac";
+}
+.portletBirthdayPortlet dt:before {
+  content: "\f000";
+}
+.portletWorkflowReview dt:before {
+  content: "\f071";
+}
+.portletPersonProfile dt:before {
+  content: "\f017";
+}
+/* fix me! I have no class */
+.portletEvents dt:before {
+  content: "\f073";
+}
+/* portlet profile */
+dl.portletPersonProfile > dt {
+  display: none;
+}
+.profile-options li {
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+.profile-options li a {
+  display: block;
+  padding: 7px;
+  color: #666 !important;
+}
+.profile-options li a:before {
+  content: "\f007";
+  font-family: FontAwesome;
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+dl.portletPersonProfile dl {
+  margin-top: 4em;
+  font-size: 100%;
+}
+dl.portletPersonProfile dl .portletItemDetails {
+  color: #666;
+  margin-left: 0;
+}
+/* lists inside columns */
+aside dl,
+aside dd,
+aside ul {
+  padding: 0;
+  margin: 0;
+}
+aside a {
+  text-decoration: none;
+}
+/* portlet navigation */
+.portletNavigationTree ul {
+  margin: 0;
+}
+.portletNavigationTree li {
+  list-style-position: inside;
+}
+.portletNavigationTree .navTreeLevel0 > li {
+  border-bottom: #d0d0d0 1px solid;
+  list-style: none;
+}
+.portletNavigationTree a {
+  display: block;
+  padding: 0.3em 0.3em 0.3em 0.5em;
+}
+.portletNavigationTree a:hover {
+  background: #e9e9e9;
+}
+.navTreeLevel2 a {
+  padding-left: 1em;
+}
+.navTreeLevel3 a {
+  padding-left: 2em;
+}
+.navTreeLevel4 a {
+  padding-left: 3em;
+}
+.navTreeLevel5 a {
+  padding-left: 4em;
+}
+.navTreeLevel6 a {
+  padding-left: 5em;
+}
+/* profile portlet */
+dl.portletPersonProfile > dt {
+  display: none;
+}
+.profile-options li {
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+.profile-options li a {
+  display: block;
+  padding: 7px;
+  color: #666 !important;
+}
+.profile-options li a:before {
+  content: "\f007";
+  font-family: FontAwesome;
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+dl.portletPersonProfile dl {
+  margin-top: 4em;
+  font-size: 100%;
+}
+dl.portletPersonProfile dl .portletItemDetails {
+  color: #666;
+  margin-left: 0;
+}
+/********** Config bugs *************/
+.label,
+.badge {
+  color: #333333;
+  text-shadow: 0;
+  background-color: transparent;
+}
+.label:empty,
+.badge:empty {
+  display: inline;
+}
+/********** Edit bar *************/
+#edit-bar,
+#content-views,
+#contentActionMenus,
+#contentActionMenus dl.actionMenu a,
+#contentActionMenus dl.actionMenu.activated dd {
+  background-color: #0e9de3;
+}
+#edit-bar,
+#contentActionMenus dl.actionMenu.activated dd {
+  border-color: #0e9de3;
+}
+#content-views li.selected a,
+#content-views li a:hover,
+#content li.formTab a.selected,
+#content li.formTab a:hover,
+#content-core li.formTab a.selected,
+#content-core li.formTab a:hover {
+  background: #f6f6f6;
+}
+/********** Footer **********/
+footer {
+  background: #d8d8d8;
+  padding: 2em;
+  font-size: 80%;
+  border-top: 1px solid #ccc;
+}
+footer p {
+  margin-bottom: 2em;
+}
+#footer-info {
+  padding-top: 10px;
+}
+/**** RESPONSIVE ***/
+#btnav i {
+  display: none;
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  #main {
+    margin-top: 4em;
+  }
+  #logo {
+    float: right;
+  }
+  #portal-breadcrumbs {
+    display: none;
+  }
+  #main-header {
+    height: 45px;
+  }
+  #logo a img {
+    margin-top: 5px;
+    width: 2em;
+  }
+  #btnav {
+    background: transparent url(img/btmenu.jpg) no-repeat 0 0;
+    width: 153px;
+    height: 40px;
+    display: block;
+    top: 0;
+    position: absolute;
+  }
+  #btnav ul {
+    display: none;
+  }
+  div:hover#btnav ul {
+    padding-top: 10px;
+    display: block;
+    top: 40px;
+    position: absolute;
+    background: #f8f8f8;
+  }
+  div:hover#btnav ul li a {
+    padding: 10px;
+  }
+  #btnav i {
+    display: block;
+    font-size: 2em;
+    padding-top: 10px;
+  }
+  header > div {
+    width: 93%;
+  }
+  #main-content,
+  #column-one,
+  #column-two {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  
+}
